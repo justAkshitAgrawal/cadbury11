@@ -15,7 +15,7 @@ const Button = ({ text, icon, onClick, className = "" }: ButtonProps) => {
       className={`p-3  text-white rounded flex items-center ${className}`}
     >
       {icon && <div className="">{icon}</div>}
-      {text && <p className="ml-2 text-sm">{text}</p>}
+      {text && <p className=" text-sm">{text}</p>}
     </button>
   );
 };

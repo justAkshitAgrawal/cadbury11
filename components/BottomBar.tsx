@@ -52,6 +52,16 @@ const BottomBar = () => {
           className="bg-yellow-500 hover:bg-yellow-700"
           icon={<LiaRandomSolid className="size-4" />}
         />
+        <Button
+          onClick={() => {}}
+          className="bg-blue-500 hover:bg-yellow-700"
+          text="4:3"
+        />
+        <Button
+          onClick={() => {}}
+          className="bg-blue-500 hover:bg-yellow-700"
+          text="16:9"
+        />
       </div>
       <div>
         <Button

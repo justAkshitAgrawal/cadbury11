@@ -5,7 +5,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="bg-[#121214] h-screen flex flex-col ">
+    <div className="bg-[#121214] h-screen flex flex-col scrollbar-hide overflow-hidden">
       <TopBar />
       <VideoGrid />
       <BottomBar />

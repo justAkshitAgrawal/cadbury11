@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#121214] h-screen  `}>
+      <body
+        className={`${inter.className} bg-[#121214] h-screen scrollbar-hide`}
+      >
         {children}
       </body>
     </html>
