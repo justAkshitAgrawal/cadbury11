@@ -20,12 +20,12 @@ const SideBar = () => {
         duration: 0.5,
         delay: 0.2,
       }}
-      style={{ height: "calc(100vh - 165px)" }}
+      style={{ height: "calc(100vh - 172px)" }}
       className="ml-5 flex h-full max-h-full w-80 "
     >
-      <div className="bg-white h-full p-4 rounded-md w-full overflow-scroll scrollbar-hide">
+      <div className="bg-[#181a20] h-full p-4 rounded-md w-full overflow-scroll scrollbar-hide">
         <div className="flex items-center justify-between py-4">
-          <h1 className="text-xl font-semibold">Participants</h1>
+          <h1 className="text-xl text-white font-semibold">Participants</h1>
           <p className="text-sm text-gray-500">{participants.length} online</p>
         </div>
         <div className="flex flex-col space-y-4">
@@ -37,7 +37,7 @@ const SideBar = () => {
                 animate={{ opacity: 1 }}
                 key={participant.id}
                 layoutId={`participant-box-active-${participant.id}`}
-                className="flex items-center justify-between p-2 bg-gray-100 rounded-md"
+                className="flex items-center justify-between p-2 border border-gray-600 text-white cursor-pointer rounded-md"
               >
                 <div className="flex items-center space-x-2">
                   <p className="text-sm">
@@ -57,7 +57,7 @@ const SideBar = () => {
                 animate={{ opacity: 1 }}
                 key={participant.id}
                 layoutId={`participant-box-inactive-${participant.id}`}
-                className="flex items-center justify-between p-2 bg-gray-100 rounded-md"
+                className="flex items-center justify-between p-2 border border-gray-600 text-white cursor-pointer rounded-md"
               >
                 <div className="flex items-center space-x-2">
                   <p className="text-sm">

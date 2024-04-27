@@ -7,6 +7,8 @@ import Button from "./Button";
 import { IoVideocam } from "react-icons/io5";
 import { participantStore } from "@/store/participant-store";
 import { useStore } from "zustand";
+import { SideBarStore } from "@/store/layout-store";
+import { motion } from "framer-motion";
 
 interface ParticipantBoxProps {
   participant: {
@@ -19,8 +21,14 @@ const ParticipantBox = (props: ParticipantBoxProps) => {
   const turnVideoOn = useStore(participantStore).turnVideoOn;
   const turnVideoOff = useStore(participantStore).turnVideoOff;
 
+  const aspectRation = useStore(SideBarStore).aspectRatio;
+
   return (
-    <div className=" text-white flex relative items-center p-2 justify-center rounded-md aspect-video max-h-full bg-[#181a20] h-full overflow-hidden ">
+    <motion.div
+      layoutId={`participant-box-${id}`}
+      className=" text-white flex relative items-center p-2 justify-center rounded-md max-h-full bg-[#181a20] h-full overflow-hidden "
+      style={{ aspectRatio: aspectRation }}
+    >
       {videoIsOn && (
         <div className="absolute bg-white w-full">
           <Video className="" src={vid} autoPlay loop muted controls={false} />
@@ -35,18 +43,18 @@ const ParticipantBox = (props: ParticipantBoxProps) => {
             turnVideoOn(id);
           }
         }}
-        className={`bg-blue-500 hover:bg-blue-700 z-10 ${
+        className={`border-blue-700 transition-all border hover:bg-blue-700 z-10 ${
           videoIsOn
-            ? "opacity-50 bg-transparent hover:bg-black hover:opacity-100"
+            ? "opacity-50 bg-transparent border-black hover:bg-black hover:opacity-100"
             : ""
         }`}
         icon={
           <IoVideocam
-            className={`size-4 ${videoIsOn ? "text-red-500" : "text-white"}`}
+            className={`size-3 ${videoIsOn ? "text-red-500" : "text-white"}`}
           />
         }
       />
-    </div>
+    </motion.div>
   );
 };
 

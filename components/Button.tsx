@@ -12,7 +12,7 @@ const Button = ({ text, icon, onClick, className = "" }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className={`p-3  text-white rounded flex items-center ${className}`}
+      className={`p-3 text-white rounded flex items-center ${className}`}
     >
       {icon && <div className="">{icon}</div>}
       {text && <p className=" text-sm">{text}</p>}

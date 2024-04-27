@@ -58,8 +58,6 @@ const VideoGrid = () => {
                 }}
                 className="h-full w-full relative flex items-center justify-center  "
               >
-                {/* TODO: Add Video */}
-
                 <ParticipantBox participant={participant} />
               </motion.div>
             ))}
