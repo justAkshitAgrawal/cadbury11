@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { participantStore } from "@/store/participant-store";
 import { useStore } from "zustand";
 import { FaVideo } from "react-icons/fa";
+import ParticipantInfo from "./ParticipantInfo";
 
 const SideBar = () => {
   const participants = useStore(participantStore).participants;
@@ -32,40 +33,21 @@ const SideBar = () => {
           {participants
             .filter((participant) => participant.videoIsOn)
             .map((participant) => (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+              <ParticipantInfo
                 key={participant.id}
-                layoutId={`participant-box-active-${participant.id}`}
-                className="flex items-center justify-between p-2 border border-gray-600 text-white cursor-pointer rounded-md"
-              >
-                <div className="flex items-center space-x-2">
-                  <p className="text-sm">
-                    {(1000 * participant.id).toFixed(0)}
-                  </p>
-                </div>
-
-                <FaVideo className="text-green-500" />
-              </motion.div>
+                id={participant.id}
+                cameraOn={participant.videoIsOn}
+              />
             ))}
 
           {participants
             .filter((participant) => !participant.videoIsOn)
             .map((participant) => (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+              <ParticipantInfo
                 key={participant.id}
-                layoutId={`participant-box-inactive-${participant.id}`}
-                className="flex items-center justify-between p-2 border border-gray-600 text-white cursor-pointer rounded-md"
-              >
-                <div className="flex items-center space-x-2">
-                  <p className="text-sm">
-                    {(1000 * participant.id).toFixed(0)}
-                  </p>
-                </div>
-                <FaVideo className="text-red-500" />
-              </motion.div>
+                id={participant.id}
+                cameraOn={participant.videoIsOn}
+              />
             ))}
         </div>
       </div>

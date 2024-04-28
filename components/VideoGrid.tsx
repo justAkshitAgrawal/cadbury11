@@ -1,7 +1,7 @@
 "use client";
 
 import { participantStore } from "@/store/participant-store";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useStore } from "zustand";
 import SideBar from "./SideBar";
 import { SideBarStore } from "@/store/layout-store";
@@ -12,14 +12,6 @@ const VideoGrid = () => {
   const participants = useStore(participantStore).participants;
   const isOpen = useStore(SideBarStore).isOpen;
   const numColumns = Math.floor(Math.sqrt(participants.length));
-
-  const participantRefs = useRef([]);
-
-  useEffect(() => {
-    participantRefs.current = participants.map(
-      (_, index) => participantRefs.current[index] ?? React.createRef()
-    );
-  }, [participants]);
 
   return (
     <div className="flex w-full h-full max-h-full px-12 ">
@@ -47,7 +39,6 @@ const VideoGrid = () => {
           >
             {participants.map((participant, index) => (
               <motion.div
-                ref={participantRefs.current[index]}
                 layoutId={`participant-${participant.id}`}
                 initial={{ opacity: 0, scale: 0.6 }}
                 animate={{ opacity: 1, scale: 1 }}

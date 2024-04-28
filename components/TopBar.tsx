@@ -3,7 +3,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 const TopBar = () => {
   return (
     <div className="text-white py-6 px-12 flex items-center justify-between">
-      <h1>
+      <h1 className="cursor-pointer">
         Cadbury<span className="text-blue-500 font-semibold text-xl">11</span>
       </h1>
 
