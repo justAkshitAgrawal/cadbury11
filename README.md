@@ -1,5 +1,3 @@
-![c11](https://hackmd.io/_uploads/Hki32jjZ0.png)
-
 # Cadbury11: Video Conferencing Grid UI
 
 This project is a video conferencing grid UI built using Next.js, TypeScript, TailwindCSS, and Framer Motion. It showcases a user interface for a video conferencing application, complete with various features and animations to enhance the user experience.
