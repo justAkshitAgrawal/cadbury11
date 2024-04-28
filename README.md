@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![c11](https://hackmd.io/_uploads/Hki32jjZ0.png)
+
+# Cadbury11: Video Conferencing Grid UI
+
+This project is a video conferencing grid UI built using Next.js, TypeScript, TailwindCSS, and Framer Motion. It showcases a user interface for a video conferencing application, complete with various features and animations to enhance the user experience.
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Clone the Git repository to your local machine.
+- Navigate to the project directory.
+- Run `npm install` to install the required dependencies.
+- After the installation is complete, run `npm run dev` to start the development server.
+- Open [http://localhost:5000](http://localhost:5000) in your web browser to see the project live.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Participant Management**: Add or remove participants from the video conferencing grid.
+- **Video Resolution Support**: The UI supports both 16:9 and 4:3 aspect ratios for video displays.
+- **Shuffle Function**: Simulate the joining and leaving of participants in real-time with the shuffle function.
+- **Sidebar**: Access additional information or functionalities through the sidebar.
+- **Animations**: Subtle animations have been implemented to enhance the visual appeal and provide a smoother user experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Next.js
+- TypeScript
+- TailwindCSS
+- Framer Motion
